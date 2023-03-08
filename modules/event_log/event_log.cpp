@@ -112,6 +112,6 @@ static void eventLogElementStateUpdate( bool lastState,
                                         const char* elementName )
 {
     if ( lastState != currentState ) {        
-        eventLogWrite( currentState, elementName );       
+        eventLogWrite( currentState, elementName );  
     }
 }
