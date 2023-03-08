@@ -1,61 +1,46 @@
-//=====[Libraries]=============================================================
-
 #include "mbed.h"
 #include "arm_book_lib.h"
-
+#include "ldr_sensor.h"
 #include "siren.h"
-
 #include "smart_home_system.h"
 
-//=====[Declaration of private defines]========================================
 
-//=====[Declaration of private data types]=====================================
+DigitalInOut oPiezo(PC_8);
+DigitalInOut iPiezo(PC_9);
 
-//=====[Declaration and initialization of public global objects]===============
 
-DigitalOut sirenPin(PE_10);
+static int currentoPiezoTime = 0;
+static int currentiPiezoTime = 0;
 
-//=====[Declaration of external public global variables]=======================
 
-//=====[Declaration and initialization of public global variables]=============
-
-//=====[Declaration and initialization of private global variables]============
-
-static bool sirenState = OFF;
-
-//=====[Declarations (prototypes) of private functions]========================
-
-//=====[Implementations of public functions]===================================
 
 void sirenInit()
 {
-    sirenPin = ON;
+    oPiezo.mode(OpenDrain);
+    oPiezo.input();
+    iPiezo.mode(OpenDrain);
+    iPiezo.input();
 }
 
-bool sirenStateRead()
+
+void oPiezoState()
 {
-    return sirenState;
+    oPiezo.output();
+    oPiezo = LOW;
+    delay(100);
+    oPiezo.input();
 }
 
-void sirenStateWrite( bool state )
-{
-    sirenState = state;
-}
 
-void sirenUpdate( int strobeTime )
+void iPiezoState()
 {
-    static int accumulatedTimeAlarm = 0;
-    accumulatedTimeAlarm = accumulatedTimeAlarm + SYSTEM_TIME_INCREMENT_MS;
-    
-    if( sirenState ) {
-        if( accumulatedTimeAlarm >= strobeTime ) {
-                accumulatedTimeAlarm = 0;
-                sirenPin= !sirenPin;
-        }
+    if( alarmState )
+    {
+        iPiezo.output();
+        iPiezo = LOW;
+        delay(100);
+        iPiezo.input();
     } else {
-        sirenPin = ON;
+        iPiezo.input();
     }
 }
-
-//=====[Implementations of private functions]==================================
-
