@@ -10,6 +10,7 @@
 #include "user_interface.h"
 #include "date_and_time.h"
 #include "pc_serial_com.h"
+#include "ldr_sensor.h"
 
 //=====[Declaration of private defines]========================================
 
@@ -28,6 +29,8 @@ typedef struct systemEvent {
 
 //=====[Declaration and initialization of private global variables]============
 
+static bool rLdrLastState = OFF;  // new
+static bool gLdrLastState = OFF;   // new
 static bool sirenLastState = OFF;
 static bool gasLastState   = OFF;
 static bool tempLastState  = OFF;
@@ -65,6 +68,14 @@ void eventLogUpdate()
     currentState = systemBlockedStateRead();
     eventLogElementStateUpdate( SBLastState ,currentState, "LED_SB" );
     SBLastState = currentState;
+    
+    currentState = rLdrRead();
+    eventLogElementStateUpdate( rLdrLastState, currentState, "rLDr state" );   // new
+    rLdrLastState = currentState;
+
+    currentState = gLdrRead();
+    eventLogElementStateUpdate( gLdrLastState, currentState, "gLDr state" ); // new
+    rLdrLastState = currentState;
 }
 
 int eventLogNumberOfStoredEvents()
