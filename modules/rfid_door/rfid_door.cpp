@@ -21,7 +21,7 @@
 //=====[Declaration of external public global variables]=======================
 
 //=====[Declaration and initialization of public global variables]=============
-
+static bool doorStatus = OFF;
 //=====[Declaration and initialization of private global variables]============
 
 
@@ -31,7 +31,13 @@ void doorUpdate();
 
 //=====[Implementations of public functions]===================================
 
-void doorInit(){}  
+void doorInit(){
+    doorStatus = OFF;
+}  
+
+bool doorStateRead(){
+    return doorStatus;
+}
 
 void doorUpdate(){
     ldrSensorUpdate();
@@ -39,6 +45,7 @@ void doorUpdate(){
         toGreenRgbLed();
         openDoor();
         servo_doorInit();
+        doorStatus=ON;
     }
 }
 
