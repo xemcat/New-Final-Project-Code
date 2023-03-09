@@ -23,7 +23,7 @@ DigitalInOut piezzo(PC_8);
 
 //=====[Declaration and initialization of private global variables]============
 
-
+static bool buzzerState = OFF;
 
 //=====[Declarations (prototypes) of private functions]========================
 
@@ -39,11 +39,16 @@ void piezoInit(){
     piezzo.input();
 }
 
+bool buzzerStateRead(){
+    return buzzerState;
+}
+
 void piezoUpdate(){
     ldrSensorUpdate();
     if(rldrSensorRead()==true){
         piezzo.output();
         piezzo = LOW;
+        buzzerState = ON;
     }else{
         piezzo.input();
     }
