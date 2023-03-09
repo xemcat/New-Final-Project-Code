@@ -18,4 +18,3 @@ float rldrSensorRead();
 //=====[#include guards - end]=================================================
 
 #endif // _SIREN_H_
-
