@@ -12,7 +12,7 @@
 //=====[Declaration and initialization of public global objects]===============
 
 DigitalOut r(PA_0);
-DigitalOut g(PA_12);
+DigitalOut g(PD_12);
 DigitalOut b(PB_4);
 DigitalOut rgbLED[] = {r,b,g};
 
