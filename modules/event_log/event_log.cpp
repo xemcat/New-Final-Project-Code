@@ -11,6 +11,8 @@
 #include "date_and_time.h"
 #include "pc_serial_com.h"
 #include "ldr_sensor.h"
+#include "outPiezzo.h"
+#include "rfid_door.h"
 
 //=====[Declaration of private defines]========================================
 
@@ -28,8 +30,8 @@ typedef struct systemEvent {
 //=====[Declaration and initialization of public global variables]=============
 
 //=====[Declaration and initialization of private global variables]============
-static bool rLdrLastState = OFF;  // new
-static bool gLdrLastState = OFF;   // new
+static bool buzzerLastState = OFF;  // new
+static bool doorLastState = OFF;   // new
 static bool sirenLastState = OFF;
 static bool gasLastState   = OFF;
 static bool tempLastState  = OFF;
@@ -68,13 +70,13 @@ void eventLogUpdate()
     eventLogElementStateUpdate( SBLastState ,currentState, "LED_SB" );
     SBLastState = currentState;
     
-    currentState = rLdrStateRead();
-    eventLogElementStateUpdate( rLdrLastState, currentState, "Failed Attempt" );   // new
-    rLdrLastState = currentState;
+    currentState = buzzerStateRead();
+    eventLogElementStateUpdate( buzzerLastState, currentState, "Failed Attempt" );   // new
+    buzzerLastState = currentState;
 
-    currentState = gLdrStateRead();
-    eventLogElementStateUpdate( gLdrLastState, currentState, "Door Opened" ); // new
-    rLdrLastState = currentState;
+     currentState = doorStateRead();
+     eventLogElementStateUpdate( doorLastState, currentState, "Door Opened" ); // new
+     doorLastState = currentState;
     
 }
 
