@@ -5,7 +5,7 @@
 
 #include "entryway.h"
 #include "ldr_sensor.h"
-
+#include "outPiezzo.h"
 #include "smart_home_system.h"
 
 //=====[Declaration of private defines]========================================
