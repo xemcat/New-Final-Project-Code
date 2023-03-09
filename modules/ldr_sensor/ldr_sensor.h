@@ -14,6 +14,8 @@ void ldrSensorUpdate();
 float ldrSensorRead();
 float gldrSensorRead();
 float rldrSensorRead();
+bool gLdrStateRead();
+bool rLdrStateread();
 
 //=====[#include guards - end]=================================================
 
