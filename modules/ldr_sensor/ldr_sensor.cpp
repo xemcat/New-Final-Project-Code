@@ -22,7 +22,8 @@ AnalogIn rldr(A4);
 //=====[Declaration and initialization of public global variables]=============
 
 //=====[Declaration and initialization of private global variables]============
-
+static bool rLdrState = OFF;  // new
+static bool gLdrState = OFF;  // new
 
 //=====[Declarations (prototypes) of private functions]========================
 
@@ -35,14 +36,26 @@ void ldrSensorInit(){}
 
 void ldrSensorUpdate(){}
 
+bool rLdrStateRead()
+{         //new
+    return rLdrState;         //new
+}
+
+bool gLdrStateRead()
+{     //new
+    return gLdrState;
+}
+
 float ldrSensorRead(){
     return eldr.read();
 }
 
 float gldrSensorRead(){
     return gldr.read();
+    gLdrState = ON;   //new
 }
 
 float rldrSensorRead(){
     return rldr.read();
+    rLdrState = ON;  ///new
 }
