@@ -9,7 +9,7 @@
 
 //=====[Declarations (prototypes) of public functions]=========================
 
-//void rgbInit();
+void rgbInit();
 void toGreenRgbLed();
 void toGreenRgbLed();
 void rgbLedInit();
