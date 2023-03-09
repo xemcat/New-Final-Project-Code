@@ -11,6 +11,7 @@
 
 void doorInit();
 void doorUpdate();
+bool doorStateRead();
 
 //=====[#include guards - end]=================================================
 
