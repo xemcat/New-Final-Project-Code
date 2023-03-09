@@ -1,4 +1,4 @@
-/=====[#include guards - begin]===============================================
+//=====[#include guards - begin]===============================================
 
 #ifndef _OUTPIEZZO_H_
 #define _OUTPIEZZO_H_
@@ -16,4 +16,3 @@ void piezoUpdate();
 //=====[#include guards - end]=================================================
 
 #endif // _ENTRYWAY_LIGHT_H_
-
