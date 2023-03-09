@@ -9,6 +9,10 @@
 #include "fire_alarm.h"
 #include "pc_serial_com.h"
 #include "event_log.h"
+#include "entryway.h" // new
+#include "outPiezzo.h"
+#include "rfid_door.h"
+#include "rgb_led.h"
 
 //=====[Declaration of private defines]========================================
 
@@ -31,6 +35,11 @@ void smartHomeSystemInit()
     userInterfaceInit();
     fireAlarmInit();
     pcSerialComInit();
+    entrywayLightInit();//////
+    piezoInit();
+    doorInit();
+    rgbLedInit();
+   
 }
 
 void smartHomeSystemUpdate()
@@ -39,6 +48,9 @@ void smartHomeSystemUpdate()
     fireAlarmUpdate();    
     pcSerialComUpdate();
     eventLogUpdate();
+    entrywayLightUpdate();
+    doorUpdate();
+    piezoUpdate();
     delay(SYSTEM_TIME_INCREMENT_MS);
 }
 
