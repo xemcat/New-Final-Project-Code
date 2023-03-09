@@ -69,11 +69,11 @@ void eventLogUpdate()
     SBLastState = currentState;
     
     currentState = rLdrStateRead();
-    eventLogElementStateUpdate( rLdrLastState, currentState, "rLDr state" );   // new
+    eventLogElementStateUpdate( rLdrLastState, currentState, "Failed Attempt" );   // new
     rLdrLastState = currentState;
 
     currentState = gLdrStateRead();
-    eventLogElementStateUpdate( gLdrLastState, currentState, "gLDr state" ); // new
+    eventLogElementStateUpdate( gLdrLastState, currentState, "Door Opened" ); // new
     rLdrLastState = currentState;
     
 }
