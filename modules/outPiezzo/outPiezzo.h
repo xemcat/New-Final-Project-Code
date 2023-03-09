@@ -11,6 +11,7 @@
 
 void piezoInit();
 void piezoUpdate();
+bool buzzerStateRead();
 
 
 //=====[#include guards - end]=================================================
