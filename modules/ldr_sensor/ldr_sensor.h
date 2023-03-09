@@ -15,8 +15,7 @@ float ldrSensorRead();
 float gldrSensorRead();
 float rldrSensorRead();
 bool gLdrStateRead();
-bool rLdrStateread();
-
+bool rLdrStateRead();
 //=====[#include guards - end]=================================================
 
 #endif // _SIREN_H_
