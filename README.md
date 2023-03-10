@@ -20,9 +20,11 @@ The main function of our software is to provide an advanced security system to a
 
 **ldr_sensor**: This module takes in readings from the three Ldr sensors. one ldr sensor to detect correct RFID tags, another to detect incorrect RFID tags and lastly to turn on/off the entryway LED light. 
 
-**entryway**: 
-**outPiezzo**:
-**rgb_led**:
+**entryway**:  This module calls a function inside ldr sensor that reads the ldr sensor value for turning the entryway light ON when it is dark and OFF when it is dalight. 
+
+**outPiezzo**: If there is an incorrect tag scanned, the ldr sensor value is read and this module sets off the piezzo buzzer to indicate that an incorrect tag has just been scanned
+
+**rgb_led**: 
 
 
 
