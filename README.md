@@ -24,7 +24,7 @@ The main function of our software is to provide an advanced security system to a
 
 **outPiezzo**: If there is an incorrect tag scanned, the ldr sensor value is read and this module sets off the piezzo buzzer to indicate that an incorrect tag has just been scanned
 
-**rgb_led**: 
+**rgb_led**: This module controls the led lights of an RGB LED. The RGB is set to values that turn completly red and complety green in different functions
 
 
 
