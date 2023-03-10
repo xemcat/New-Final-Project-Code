@@ -30,7 +30,11 @@ The main function of our software is to provide an advanced security system to a
 
 
 ## A list of the hardware components connected to the Nucleo board, and the pins for each component
-
+<table>
+  <td>
+    
+  </td>
+</table>
 
 
 ## A description of the tests you performed on the system, and the results.
