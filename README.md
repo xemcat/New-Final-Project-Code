@@ -1,4 +1,4 @@
-###Advanced Smart Home Security System
+###Advanced Smart Home Security System###
 
 ## Emma Watson, Delvin Marimo, Muhammed Memon
 
