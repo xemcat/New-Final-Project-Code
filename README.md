@@ -40,3 +40,5 @@ To test the door functionaility, we had 6 different RFID tags all assigned with 
 
 
 ## Any other details that will help the reader understand your code
+
+We used two different boards, red board and STM35, to implement our project. The aduino red board was used to write code for the RFID scanner and all other functionalities were implemented using the nucleo board. To link the two boards, we used ldr sensors and LED lights. When a correct tag is scanned, a blue LED connected to the aduino circuit will turn on for 10 seconds triggering an LDR sensor connected to the nucleo board. Similar activity happens when a wrong tag is scanned. A red LED on the aduino circuit is turned on for 10 seconds triggering a different LDR sensor connected to the nucleo board. After that, all the functions connected to the nucleo board will start to be implemented.
