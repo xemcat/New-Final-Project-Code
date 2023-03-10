@@ -26,7 +26,7 @@ The main function of our software is to provide an advanced security system to a
 
 **rgb_led**: This module controls the led lights of an RGB LED. The RGB is set to values that turn completly red and complety green in different functions
 
-
+**Aduino code**: 
 
 
 ## A list of the hardware components connected to the Nucleo board, and the pins for each component
