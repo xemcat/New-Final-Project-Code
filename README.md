@@ -1,6 +1,7 @@
-#Advanced Smart Home Security System
 
-## Emma Watson, Delvin Marimo, Muhammed Memon
+# Emma Watson, Delvin Marimo, Muhammed Memon
+
+##Advanced Smart Home Security System
 
 ##The date you submitted the code for review
 
