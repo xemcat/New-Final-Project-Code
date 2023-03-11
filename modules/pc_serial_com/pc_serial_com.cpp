@@ -246,7 +246,7 @@ static void commandShowCurrentTemperatureInCelsius()
 static void commandShowCurrentTemperatureInFahrenheit()
 {
     char str[100] = "";
-    sprintf ( str, "Temperature: %.2f \xB0 C\r\n",
+    sprintf ( str, "Temperature: %.2f \xB0 F\r\n",
                     temperatureSensorReadFahrenheit() );
     pcSerialComStringWrite( str );  
 }
