@@ -30,12 +30,86 @@ The main function of our software is to provide an advanced security system to a
 
 
 ## A list of the hardware components connected to the Nucleo board, and the pins for each component
-<table>
-  <td>
-    
-  </td>
+<!DOCTYPE html>
+<html>
+<style>
+table, th, td {
+  border:1px solid black;
+}
+</style>
+<body>
+
+<h2>A basic HTML table</h2>
+
+<table style="width:100%">
+  <tr>
+    <th>RC522 PinOut</th>
+    <th>PinOut Type</th>
+    <th>Possible Interfaces</th>
+    <th>Interface Used</th>
+    <th>Nucleo Pin</th>
+  </tr>
+  <tr>
+    <td>3.3V</td>
+    <td>Power</td>
+    <td>VCC</td>
+    <td>3.3V</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>RST</td>
+    <td>Reset</td>
+    <td>RST</td>
+    <td>NRST</td>
+    <td>CN8_3</td>
+  </tr>
+  <tr>
+    <td>GND</td>
+    <td>Ground</td>
+    <td>GND</td>
+    <td>GND</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>IRQ</td>
+    <td>Interrupt request</td>
+    <td>Interrupt</td>
+    <td>Not Used</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>MISO</td>
+    <td>Master Input Slave Output</td>
+    <td>SPI/I2C/UART</td>
+    <td>UART3_TX</td>
+    <td>CN10_10</td>
+  </tr>
+  <tr>
+    <td>MOSI</td>
+    <td>Master Output Slave Input</td>
+    <td>SPI</td>
+    <td>SPI3_MOSI</td>
+    <td>CN8_10</td>
+  </tr>
+  <tr>
+    <td>SCK</td>
+    <td>Serial Clock</td>
+    <td>SPI</td>
+    <td>SPI3_SCK</td>
+    <td>Mexico</td>
+  </tr>
+  <tr>
+    <td>SDA</td>
+    <td>Serial date</td>
+    <td>SPI/I2C/UART</td>
+    <td>UART3_RX</td>
+    <td>CN10_26</td>
+  </tr>
+  
 </table>
 
+</body>
+</html>
 
 ## A description of the tests you performed on the system, and the results.
 To test the entryway LED light, we placed a hand over the LDR sensor to provide some darkness. The entryway LED turned on when a hand was used to cover the ldr sensor and the LED turned off when the hand was removed.
