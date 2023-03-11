@@ -1,5 +1,5 @@
 
-# Emma Watson, Delvin Marimo, Muhammed Memon
+# Emma Watson, Delvin Marimo, Muhammed Farooq Memon
 
 ## Advanced Smart Home Security System
 ## 10 March 2023
