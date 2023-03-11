@@ -30,6 +30,7 @@ The main function of our software is to provide an advanced security system to a
 
 
 ## A list of the hardware components connected to the Nucleo board, and the pins for each component
+
 <!DOCTYPE html>
 <html>
 <style>
@@ -39,7 +40,7 @@ table, th, td {
 </style>
 <body>
 
-<h2>A basic HTML table</h2>
+<h2>RC522 Connections</h2>
 
 <table style="width:100%">
   <tr>
