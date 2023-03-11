@@ -36,26 +36,26 @@ void ldrSensorInit(){}
 
 void ldrSensorUpdate(){}
 
-bool rLdrStateRead()
+bool rLdrStateRead() // checks the state of the LDR
 {         //new
     return rLdrState;         //new
 }
 
-bool gLdrStateRead()
+bool gLdrStateRead() // checks the ldr senso state connected to the green LED
 {     //new
     return gLdrState;
 }
 
-float ldrSensorRead(){
+float ldrSensorRead(){ // read the ldr sensor values for the entryway LED
     return eldr.read();
 }
 
-float gldrSensorRead(){
+float gldrSensorRead(){ // read the ldr sensor values for the green LED
     return gldr.read();
     gLdrState = ON;   //new
 }
 
-float rldrSensorRead(){
+float rldrSensorRead(){. // read the ldr sensor values for the red LED
     return rldr.read();
-    rLdrState = ON;  ///new
+    rLdrState = ON;  
 }
