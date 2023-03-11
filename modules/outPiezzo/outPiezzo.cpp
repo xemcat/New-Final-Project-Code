@@ -38,11 +38,11 @@ void piezoInit(){
     piezzo.mode(OpenDrain);
     piezzo.input();
 }
-
+// reads the state of the buzzer
 bool buzzerStateRead(){
     return buzzerState;
 }
-
+// if a value above the threshold is read from the ldr sensor, the buzzer goes off
 void piezoUpdate(){
     ldrSensorUpdate();
     if(rldrSensorRead()==true){
