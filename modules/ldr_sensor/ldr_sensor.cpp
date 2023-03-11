@@ -55,7 +55,7 @@ float gldrSensorRead(){ // read the ldr sensor values for the green LED
     gLdrState = ON;   //new
 }
 
-float rldrSensorRead(){. // read the ldr sensor values for the red LED
+float rldrSensorRead(){ // read the ldr sensor values for the red LED
     return rldr.read();
     rLdrState = ON;  
 }
