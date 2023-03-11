@@ -12,7 +12,7 @@ The main function of our software is to provide an advanced security system to a
 
 ## A list of the code modules. For each module give a brief description of what the module does. If the code is a) written from scratch, b) based on textbook code or c) based on code found online
 
-### Modules added
+### Modules Added
 
 **rfid_door**: This module calls a function from ldr_sensor. It checks to see if the ldr sensor connected to the green LED is reading any values greater than the threshold value. If so, it instructs the servo motor to rotate by calling a function from servo motor module. the module also keeps track of the status of the door(open or close). This is written from scratch following examples from class exercises
 
@@ -30,6 +30,14 @@ The main function of our software is to provide an advanced security system to a
 
 
 ## A list of the hardware components connected to the Nucleo board, and the pins for each component
+
+servo-motor
+piezzo buzzer
+3* LDR sensors
+gas sensor
+temperatue sensor
+RFID Scanner
+
 
 <!DOCTYPE html>
 <html>
