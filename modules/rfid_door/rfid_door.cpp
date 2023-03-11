@@ -34,11 +34,11 @@ void doorUpdate();
 void doorInit(){
     doorStatus = OFF;
 }  
-
+// checks the status of the door
 bool doorStateRead(){
     return doorStatus;
 }
-
+// reads the ldr sensor value, if the condition is true, a green LEd is turned on, and the servo motor is rotated
 void doorUpdate(){
     ldrSensorUpdate();
     if(gldrSensorRead()==true){
