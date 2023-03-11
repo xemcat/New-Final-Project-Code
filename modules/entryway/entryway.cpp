@@ -37,9 +37,9 @@ void entrywayLightInit(){
 }
 
 void entrywayLightUpdate(){
-    ldrSensorUpdate();
-    if(ldrSensorRead()==true){
-        entrywayLight =OFF;
+    ldrSensorUpdate();  // reads the sensor update
+    if(ldrSensorRead()==true){     
+        entrywayLight =OFF;      // checks the readin of the Ldr sensor, if it is below the threshold, the entrway LED turn OFf
     }else{
         entrywayLight=ON;
     }
