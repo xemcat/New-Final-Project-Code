@@ -28,15 +28,19 @@ void toredRgbLed();
 //=====[Declarations (prototypes) of private functions]========================
 
 //=====[Implementations of public functions]===================================
+
+// initialize
 void rgbLedInit(){
     toredRgbLed();
 }
+
+// turn only the green LED on
 void toGreenRgbLed(){
     r = 0.0;
     g = 1.0;
     b = 0.0;
 }
-
+// turns only the red LED on
 void toredRgbLed(){
     r = 1.0;
     g = 0.0;
