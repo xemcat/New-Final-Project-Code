@@ -31,12 +31,15 @@ The main function of our software is to provide an advanced security system to a
 
 ## A list of the hardware components connected to the Nucleo board, and the pins for each component
 
-servo-motor
-piezzo buzzer
-3* LDR sensors
-gas sensor
-temperatue sensor
-RFID Scanner
+SERVO:              PMW-PF9, GND-GND, 5V-5V
+LM35:               VCC-5V, OUT-PC0, GND-GND
+PIEZO (outside):    5V-5V, OUT-PC8
+PIEZO (inside):     5V-5V, OUT-PC9
+ELDR:               PWR-5V, OUT-PC3
+RLDR:               PWR-5V, OUT-PF5
+GLDR:               PWR-5V, OUT-PF3
+MQ2:                VCC-5V, GND-GND, DO-PE12
+RFID (arduino):     SDA-10, SCK-13, MOSI-11, GND-GND, RST-9, 3.3V-3.3V
 
 
 <!DOCTYPE html>
