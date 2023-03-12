@@ -31,21 +31,21 @@ The main function of our software is to provide an advanced security system to a
 
 ## A list of the hardware components connected to the Nucleo board, and the pins for each component
 
-SERVO:              PMW-PF9, GND-GND, 5V-5V
+SERVO Motor:              PMW-PF9, GND-GND, 5V-5V
 
-LM35:               VCC-5V, OUT-PC0, GND-GND
+LM35 Temp sensor:               VCC-5V, OUT-PC0, GND-GND
 
-PIEZO (outside):    5V-5V, OUT-PC8
+PIEZO buzzer (outside):    5V-5V, OUT-PC8
 
-PIEZO (inside):     5V-5V, OUT-PC9
+PIEZO buzzer (inside):     5V-5V, OUT-PC9
 
-ELDR:               PWR-5V, OUT-PC3
+ELDR ldr sensor:               PWR-5V, OUT-PC3
 
-RLDR:               PWR-5V, OUT-PF5
+RLDR ldr sensor:               PWR-5V, OUT-PF5
 
-GLDR:               PWR-5V, OUT-PF3
+GLDR ldr sensor:               PWR-5V, OUT-PF3
 
-MQ2:                VCC-5V, GND-GND, DO-PE12
+MQ2 gas sensor:                VCC-5V, GND-GND, DO-PE12
 
 RFID (arduino):     SDA-10, SCK-13, MOSI-11, GND-GND, RST-9, 3.3V-3.3V
 
@@ -57,6 +57,6 @@ To test the door functionaility, we had 6 different RFID tags all assigned with 
 
 The inside system was tested using a gas sensor. When a magic marker(alcohol) was brought closer to the gas sensor, the alarm went off and the serial monitor started printing GAS DETECTED. We also used sanitizer and a burning light. In all the instances, the alarm went off and the gas was being detected on the serial monitor
 
-## Any other details that will help the reader understand your code
+## Additional Information
 
 We used two different boards, red board and STM35, to implement our project. The aduino red board was used to write code for the RFID scanner and all other functionalities were implemented using the nucleo board. To link the two boards, we used ldr sensors and LED lights. When a correct tag is scanned, a blue LED connected to the aduino circuit will turn on for 10 seconds triggering an LDR sensor connected to the nucleo board. Similar activity happens when a wrong tag is scanned. A red LED on the aduino circuit is turned on for 10 seconds triggering a different LDR sensor connected to the nucleo board. After that, all the functions connected to the nucleo board will start to be implemented.
