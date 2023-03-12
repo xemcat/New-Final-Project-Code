@@ -50,7 +50,7 @@ MQ2 gas sensor:                VCC-5V, GND-GND, DO-PE12
 RFID (arduino):     SDA-10, SCK-13, MOSI-11, GND-GND, RST-9, 3.3V-3.3V
 
 
-## A description of the tests you performed on the system, and the results.
+## A description of the tests performed on the system, and the results.
 To test the entryway LED light, we placed a hand over the LDR sensor to provide some darkness. The entryway LED turned on when a hand was used to cover the ldr sensor and the LED turned off when the hand was removed.
 
 To test the door functionaility, we had 6 different RFID tags all assigned with different strings. Only 2 tags were given the correct strings. we randomly scanned all the six tags and when the door only opened twice when the two correct tags were scanned. The other four times, the buzzer went off. 
