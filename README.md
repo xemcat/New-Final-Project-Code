@@ -10,7 +10,7 @@
 The main function of our software is to provide an advanced security system to a smart home. From the armBookCodeExamples, example 2 already has code for setting off the alarm if there is things like an over Temperature detection or gas detection inside the house. From this code, we added new behaviours to our system. Basically, when an RFID card is scanned, the code will check if it is the correct tag stored in our system. if the tag is correct, the door to our smart home is opened by rotating a servo motor. When the door is unlocked, a green LED is turned on to indicate that the door is open. In the event that the tag scanned is wrong, a red LED stays on and a buzzer is set off for 10 seconds. When it is at night, an antryway LED light is turned on for visibility near the door.  
 
 
-## A list of the code modules. For each module give a brief description of what the module does. If the code is a) written from scratch, b) based on textbook code or c) based on code found online
+## A list of the code modules
 
 ### Modules Added
 
@@ -55,6 +55,7 @@ To test the entryway LED light, we placed a hand over the LDR sensor to provide 
 
 To test the door functionaility, we had 6 different RFID tags all assigned with different strings. Only 2 tags were given the correct strings. we randomly scanned all the six tags and when the door only opened twice when the two correct tags were scanned. The other four times, the buzzer went off. 
 
+The inside system was tested using a gas sensor. When a magic marker(alcohol) was brought closer to the gas sensor, the alarm went off and the serial monitor started printing GAS DETECTED. We also used sanitizer and a burning light. In all the instances, the alarm went off and the gas was being detected on the serial monitor
 
 ## Any other details that will help the reader understand your code
 
