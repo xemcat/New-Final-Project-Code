@@ -26,7 +26,7 @@ The main function of our software is to provide an advanced security system to a
 
 **rgb_led**: This module controls the led lights of an RGB LED. The RGB is set to values that turn completely red and completely green in different functions
 
-**Aduino code**: 
+**Aduino code**: The main module, scans the correct RFID tag. The RFID tag that is scanned is then compared to the data of correct RFID. If the correct RFID is detected, the appropriate LED is turned on. Contrarily, another LED will turn on if the wrong RFID is detected.
 
 
 ## A list of the hardware components connected to the Nucleo board, and the pins for each component
